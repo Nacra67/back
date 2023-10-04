@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -38,12 +38,12 @@ public class ProductController {
         return productService.insertProduct(productDto);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     public int updateProdduct(@RequestBody ProductDto productDto) {
         return productService.updateProduct((productDto));
     }
 
-    @PostMapping("/delete")
+    @DeleteMapping("/delete")
     public int deleteProduct(@RequestBody ProductDto productDto) {
         return productService.deleteProduct(productDto);
     }

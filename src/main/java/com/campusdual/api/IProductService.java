@@ -1,6 +1,5 @@
 package com.campusdual.api;
 
-import com.campusdual.model.Product;
 import com.campusdual.model.dto.ProductDto;
 
 import java.util.List;
